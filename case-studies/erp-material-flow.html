@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERP master data and material flow — Varun Mysore Vinay</title>
+<meta name="description" content="Case study: Infor LN master data at Harsco Rail — lead time and line-side inventory setup cut material shortages 75% and order scheduling errors 15%.">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <nav class="nav">
+      <a class="brand" href="../index.html">Varun Mysore Vinay</a>
+      <a href="../index.html#case-studies">Case studies</a>
+      <a href="../index.html#tools">Tools</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="case-hero">
+    <a class="backlink" href="../index.html#case-studies">← All case studies</a>
+    <p class="eyebrow">Harsco Rail · Manufacturing Engineer</p>
+    <h1>ERP master data and material flow</h1>
+    <p class="sub">
+      The shortages looked like a supplier problem. They were a master data problem — and master
+      data is engineering work, not clerical work.
+    </p>
+  </div>
+
+  <div class="result-strip">
+    <div class="metric">
+      <span class="value">75%</span>
+      <span class="label">Reduction in material shortages</span>
+    </div>
+    <div class="metric">
+      <span class="value">15%</span>
+      <span class="label">Reduction in order scheduling errors</span>
+    </div>
+    <div class="metric">
+      <span class="value">Infor LN</span>
+      <span class="label">MBOMs · routings · capacity</span>
+    </div>
+  </div>
+
+  <div class="case-body">
+
+    <h2>The situation</h2>
+    <p>
+      Builds were stalling for want of parts. The visible symptom was material shortages at the
+      line, and the instinctive explanation was supplier performance — a story that is easy to tell
+      and almost never the whole cause.
+    </p>
+    <p>
+      An ERP plans against what it has been told. If a lead time in the item master is wrong, MRP
+      will faithfully place the order too late, every single time, and the shortage arrives on
+      schedule. Nothing in the system flags this, because from the ERP's point of view it did
+      exactly what it was configured to do.
+    </p>
+
+    <div class="pull">
+      <p>
+        A shortage at the line is a symptom. The question is whether the part was ordered late, or
+        ordered on time and staged in the wrong place.
+      </p>
+    </div>
+
+    <h2>What I did</h2>
+
+    <h3>1. Treat master data as engineering data</h3>
+    <p>
+      I took ownership of <strong>ERP master data in Infor LN</strong> — MBOMs, routings, and
+      capacity — as engineering deliverables rather than as administrative records. Manufacturing
+      BOMs, routing times, and lead times drive every downstream plan: purchase timing, capacity
+      loading, scheduling, and cost. When they drift from reality, every plan built on them is
+      wrong in the same direction at once.
+    </p>
+
+    <h3>2. Correct lead times</h3>
+    <p>
+      I optimized <strong>lead time</strong> setup so that planned order release reflected actual
+      replenishment. This is unglamorous and high-leverage: a lead time that is too short
+      guarantees recurring shortages, while one that is too long inflates inventory and hides the
+      real constraint. Neither error announces itself — both look like ordinary operational noise
+      until someone checks the parameter against reality.
+    </p>
+
+    <h3>3. Fix line-side inventory setup</h3>
+    <p>
+      The second half was <strong>line-side inventory</strong> configuration — governing which
+      parts are staged at the point of use versus pulled from stores. Getting this wrong produces a
+      distinctive and confusing failure: the part is <em>in the building</em> but not
+      <em>at the station</em>, so the line stops while inventory records show healthy stock. Every
+      hour spent looking for a part that was never missing is pure non-value-added time.
+    </p>
+
+    <h3>4. Close the information gaps between functions</h3>
+    <p>
+      Material flow problems live in the gaps between departments, so I worked the problem across
+      <strong>sales, purchasing, planning, quality, and operations</strong> — the full chain from
+      order intake to the station. Each function had part of the picture and none had all of it;
+      the shortages were largely produced by the handoffs rather than by any one group's decisions.
+    </p>
+    <p>
+      Closing those gaps streamlined material flow, <strong>reduced WIP</strong>, and improved value
+      stream balance — WIP being the most honest indicator of whether material and production are
+      actually synchronized.
+    </p>
+
+    <h2>Results</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Measure</th><th>Outcome</th><th>Mechanism</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Material shortages</strong></td>
+            <td><strong>Down 75%</strong></td>
+            <td>Lead time and line-side inventory setup in Infor LN</td>
+          </tr>
+          <tr>
+            <td><strong>Order scheduling errors</strong></td>
+            <td><strong>Down 15%</strong></td>
+            <td>Corrected master data driving MRP and capacity planning</td>
+          </tr>
+          <tr>
+            <td><strong>WIP</strong></td>
+            <td>Reduced</td>
+            <td>Cross-functional coordination closing information gaps</td>
+          </tr>
+          <tr>
+            <td><strong>Scope</strong></td>
+            <td>Multiple builds</td>
+            <td>Sustained across the product range, not a single order</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      A <strong>75% reduction in shortages</strong> without renegotiating a single supplier
+      contract is the clearest evidence available that the constraint was internal. The parts were
+      largely obtainable the whole time; the system was asking for them at the wrong moment, or
+      putting them in the wrong place.
+    </p>
+
+    <h2>What generalizes</h2>
+    <ul>
+      <li><strong>Check the parameters before blaming the suppliers.</strong> An incorrect lead time produces a perfectly regular shortage that looks exactly like supplier failure.</li>
+      <li><strong>Master data is engineering work.</strong> MBOMs, routings, and lead times are process definitions. Treated as clerical records, they drift, and every plan drifts with them.</li>
+      <li><strong>"In stock" and "at the station" are different questions.</strong> Line-side setup decides which one you get.</li>
+      <li><strong>Material problems live in the handoffs.</strong> The fix usually requires the whole chain in the room, not a better performing individual function.</li>
+      <li><strong>WIP tells the truth.</strong> It is the fastest read on whether material and production are actually in sync.</li>
+    </ul>
+
+    <h2>Related</h2>
+    <p>
+      In the <a href="https://github.com/varunmysorevinay/oee-analyzer"><strong>OEE Analyzer</strong></a>'s
+      worked example, material shortage comes out as the single largest downtime reason at 29.8% —
+      ahead of every machine-related cause. That is exactly the pattern described here, and it is
+      why the Pareto matters: it sends you to planning and ERP rather than to maintenance.
+    </p>
+    <p>
+      → <a href="mixed-model-flow.html">Fixed-position builds → mixed-model flow</a>
+    </p>
+
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <span class="name">Varun Mysore Vinay — Manufacturing Engineer</span>
+      <div class="foot-links">
+        <a href="../index.html">Portfolio</a>
+        <a href="mailto:varunmysorevinay@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/varunmysorevinay">LinkedIn</a>
+        <a href="https://github.com/varunmysorevinay">GitHub</a>
+      </div>
+    </div>
+    <p class="fineprint">
+      This case study describes work performed at Harsco Rail. No proprietary drawings, routings,
+      cost data, or customer information are disclosed.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
