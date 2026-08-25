@@ -1,6 +1,6 @@
-# varunmysorevinay.github.io
+# varunmysorevinay-pixel.github.io
 
-Source for my portfolio site: **https://varunmysorevinay.github.io**
+Source for my portfolio site: **https://varunmysorevinay-pixel.github.io**
 
 Manufacturing engineering portfolio — case studies from Harsco Rail, SR Enterprises, and Dynatech Tools, plus the open-source engineering tools that implement the analyses behind them.
 
@@ -35,10 +35,10 @@ Then open `http://localhost:8899`. Open the files directly and relative paths st
 
 | Repository | What it does |
 |---|---|
-| [line-balancing-toolkit](https://github.com/varunmysorevinay/line-balancing-toolkit) | Takt, RPW station assignment, balance efficiency, bottleneck |
-| [oee-analyzer](https://github.com/varunmysorevinay/oee-analyzer) | OEE with loss attribution and downtime Pareto |
-| [time-study-toolkit](https://github.com/varunmysorevinay/time-study-toolkit) | Standard times with rating, allowances, sample-size check |
-| [capacity-planning-model](https://github.com/varunmysorevinay/capacity-planning-model) | Load vs. capacity and Kingman queueing lead time |
+| [line-balancing-toolkit](https://github.com/varunmysorevinay-pixel/line-balancing-toolkit) | Takt, RPW station assignment, balance efficiency, bottleneck |
+| [oee-analyzer](https://github.com/varunmysorevinay-pixel/oee-analyzer) | OEE with loss attribution and downtime Pareto |
+| [time-study-toolkit](https://github.com/varunmysorevinay-pixel/time-study-toolkit) | Standard times with rating, allowances, sample-size check |
+| [capacity-planning-model](https://github.com/varunmysorevinay-pixel/capacity-planning-model) | Load vs. capacity and Kingman queueing lead time |
 
 ## A note on confidentiality
 
